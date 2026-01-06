@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Golf Club WiFi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0a2d1c;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .card {
+      background: #123d2a;
+      padding: 30px;
+      border-radius: 12px;
+      width: 320px;
+      text-align: center;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 15px 0;
+      border-radius: 8px;
+      border: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      background: #1abc9c;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>Welcome to Golf Club WiFi</h2>
+    <p>Please enter your email to connect</p>
+
+    <input type="email" id="email" placeholder="email@example.com" required />
+    <button onclick="connect()">Connect</button>
+  </div>
+
+  <script>
+    function connect() {
+      const email = document.getElementById("email").value;
+
+      if (!email) {
+        alert("Please enter an email");
+        return;
+      }
+
+      // 🔥 Simulation authorization
+      alert("Access granted 🎉");
+
+      // Redirect to success page
+      window.location.href = "/success.html";
+    }
+  </script>
+
+</body>
+</html>
